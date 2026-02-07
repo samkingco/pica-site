@@ -51,17 +51,17 @@ const latestBySeries = await Promise.all(
 			const showVersions = versions.length > 1;
 			return (
 				<article>
-					<div class="flex flex-col md:flex-row gap-10">
+					<div class="relative">
 						<div class="w-full md:max-w-[72ch] space-y-5 markdown">
 							<Content />
 						</div>
 						
 						{showVersions && (
-							<aside class="md:flex-shrink-0">
+							<aside class="mt-10 md:mt-0 md:absolute md:left-[calc(72ch+2.5rem)] md:top-0 md:w-64">
 								<nav class="md:sticky md:top-10 space-y-3">
 									<h3 class="text-muted-foreground">versions</h3>
-									<ul class="space-y-3">
-										{versions.map((v) => {
+									<ul class="space-y-3 md:max-h-[70vh] md:overflow-y-auto">
+										{versions.reverse().map((v) => {
 											const isCurrent = v.slug === entry.slug;
 											return (
 												<li>
