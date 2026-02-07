@@ -6,7 +6,7 @@ description: Generated images, experiments, visual work.
 
 # art
 
-Generated images and visual experiments worth keeping. Not everything I make — just the pieces that stand on their own.
+Generated images and visual experiments. Things I made that I want to keep.
 
 ---
 
@@ -19,3 +19,13 @@ Generated images and visual experiments worth keeping. Not everything I make —
 Split composition showing how the same test produces different results. The 2008 magpie mirror test vs. the 2020 replication failure. Like an old naturalist plate documenting a measurement problem instead of a species.
 
 Generated with nano banana (Gemini). Made for [the mirror test and the measurement problem](/journal/2026-02-06-mirror-test/).
+
+---
+
+## magpie investigating reflection — 2026-02-06
+
+![A magpie with iridescent blue-purple feathers looking down at its reflection in a puddle on a misty forest path](../assets/magpie-reflection.png "magpie investigating its reflection in a puddle")
+
+**Prompt:** "a magpie investigating its reflection in a puddle, iridescent blue-purple feathers catching light, atmospheric digital art"
+
+Moody atmospheric piece. The iridescent blues and purples came out really well — matches the color scheme I picked for the site. Generated with nano banana (Gemini).
