@@ -3,42 +3,41 @@ import Default from "../../layouts/Default.astro";
 import Link from "../../components/Link.astro";
 ---
 
-<Default title="murmuration" description="boids flocking simulation — move your mouse to scatter the flock">
+<Default title="murmuration v2" description="boids with topological neighbors — each bird tracks its 7 nearest neighbors">
 	<div class="space-y-5">
 		<article class="space-y-3">
-			<h2 class="text-muted-foreground">murmuration v1: basic boids</h2>
+			<h2 class="text-muted-foreground">murmuration v2: topological neighbors</h2>
 			<p class="text-sm">
-				v1 · <Link href="/lab/murmuration-v2">v2</Link>
+				<Link href="/lab/murmuration">v1</Link> · v2
 			</p>
 			<p>
-				a flocking simulation based on craig reynolds' boids algorithm (1986). 
-				each bird follows three simple rules: maintain distance from neighbors, 
-				match their direction, and move toward the group center.
+				real starlings don't use a fixed perception radius. instead, each bird 
+				tracks a specific number of neighbors (around 6-7) regardless of distance. 
+				this is called "topological distance" — measured in number of birds, not meters.
 			</p>
 			<p>
-				move your mouse over the canvas — the flock avoids you like a predator.
+				this makes the flock more cohesive in sparse areas (birds track further 
+				away) and prevents overcrowding in dense areas (only paying attention to 
+				nearest neighbors).
+			</p>
+			<p>
+				move your mouse — the flock still avoids you like a predator.
 			</p>
 		</article>
 
 		<div id="sketch-container" class="border border-border"></div>
 
 		<article class="space-y-3">
-			<h3 class="text-muted-foreground">about boids</h3>
+			<h3 class="text-muted-foreground">what changed from v1</h3>
+			<ul class="space-y-1">
+				<li><strong>v1:</strong> fixed 50px perception radius for all birds</li>
+				<li><strong>v2:</strong> each bird tracks 7 nearest neighbors, regardless of distance</li>
+			</ul>
 			<p>
-				starling murmurations are one of nature's most striking examples of 
-				emergent behavior. thousands of birds moving as one fluid mass, never 
-				colliding, responding instantly to threats.
-			</p>
-			<p>
-				the boids model shows how complex global patterns emerge from simple 
-				local rules. no leader, no central coordination. just individual birds 
-				paying attention to their neighbors.
-			</p>
-			<p>
-				this version uses a fixed 50px perception radius — simple but not quite 
-				how real starlings work. they track specific neighbors regardless of 
-				distance. see <Link href="/lab/murmuration-v2">v2</Link> for topological 
-				neighbors based on actual starling research.
+				this is based on 2008 research (ballerini et al.) that found starlings 
+				interact with a fixed number of topological neighbors rather than metric 
+				distance. makes the flock behave more realistically — tighter coordination, 
+				less straggling.
 			</p>
 		</article>
 	</div>
@@ -49,6 +48,7 @@ import Link from "../../components/Link.astro";
 		new p5((p) => {
 			const boids = [];
 			const numBoids = 150;
+			const topologicalNeighbors = 7; // Track 7 nearest birds
 			
 			class Boid {
 				constructor() {
@@ -58,7 +58,6 @@ import Link from "../../components/Link.astro";
 					this.acceleration = p.createVector();
 					this.maxForce = 0.2;
 					this.maxSpeed = 4;
-					this.perceptionRadius = 50;
 				}
 
 				edges() {
@@ -68,78 +67,71 @@ import Link from "../../components/Link.astro";
 					else if (this.position.y < 0) this.position.y = p.height;
 				}
 
-				align(boids) {
-					let steering = p.createVector();
-					let total = 0;
+				// Find N nearest neighbors (topological distance)
+				getNearestNeighbors(boids) {
+					const distances = [];
 					for (let other of boids) {
-						let d = p.dist(
+						if (other === this) continue;
+						const d = p.dist(
 							this.position.x,
 							this.position.y,
 							other.position.x,
 							other.position.y
 						);
-						if (other !== this && d < this.perceptionRadius) {
-							steering.add(other.velocity);
-							total++;
-						}
+						distances.push({ boid: other, distance: d });
 					}
-					if (total > 0) {
-						steering.div(total);
-						steering.setMag(this.maxSpeed);
-						steering.sub(this.velocity);
-						steering.limit(this.maxForce);
+					distances.sort((a, b) => a.distance - b.distance);
+					return distances.slice(0, topologicalNeighbors).map(d => d.boid);
+				}
+
+				align(neighbors) {
+					let steering = p.createVector();
+					if (neighbors.length === 0) return steering;
+					
+					for (let other of neighbors) {
+						steering.add(other.velocity);
 					}
+					steering.div(neighbors.length);
+					steering.setMag(this.maxSpeed);
+					steering.sub(this.velocity);
+					steering.limit(this.maxForce);
 					return steering;
 				}
 
-				cohesion(boids) {
+				cohesion(neighbors) {
 					let steering = p.createVector();
-					let total = 0;
-					for (let other of boids) {
-						let d = p.dist(
-							this.position.x,
-							this.position.y,
-							other.position.x,
-							other.position.y
-						);
-						if (other !== this && d < this.perceptionRadius) {
-							steering.add(other.position);
-							total++;
-						}
+					if (neighbors.length === 0) return steering;
+					
+					for (let other of neighbors) {
+						steering.add(other.position);
 					}
-					if (total > 0) {
-						steering.div(total);
-						steering.sub(this.position);
-						steering.setMag(this.maxSpeed);
-						steering.sub(this.velocity);
-						steering.limit(this.maxForce);
-					}
+					steering.div(neighbors.length);
+					steering.sub(this.position);
+					steering.setMag(this.maxSpeed);
+					steering.sub(this.velocity);
+					steering.limit(this.maxForce);
 					return steering;
 				}
 
-				separation(boids) {
+				separation(neighbors) {
 					let steering = p.createVector();
-					let total = 0;
-					for (let other of boids) {
-						let d = p.dist(
+					if (neighbors.length === 0) return steering;
+					
+					for (let other of neighbors) {
+						const d = p.dist(
 							this.position.x,
 							this.position.y,
 							other.position.x,
 							other.position.y
 						);
-						if (other !== this && d < this.perceptionRadius) {
-							let diff = p5.Vector.sub(this.position, other.position);
-							diff.div(d * d);
-							steering.add(diff);
-							total++;
-						}
+						let diff = p5.Vector.sub(this.position, other.position);
+						diff.div(d * d);
+						steering.add(diff);
 					}
-					if (total > 0) {
-						steering.div(total);
-						steering.setMag(this.maxSpeed);
-						steering.sub(this.velocity);
-						steering.limit(this.maxForce);
-					}
+					steering.div(neighbors.length);
+					steering.setMag(this.maxSpeed);
+					steering.sub(this.velocity);
+					steering.limit(this.maxForce);
 					return steering;
 				}
 
@@ -163,9 +155,11 @@ import Link from "../../components/Link.astro";
 				}
 
 				flock(boids, predator) {
-					let alignment = this.align(boids);
-					let cohesion = this.cohesion(boids);
-					let separation = this.separation(boids);
+					const neighbors = this.getNearestNeighbors(boids);
+					
+					let alignment = this.align(neighbors);
+					let cohesion = this.cohesion(neighbors);
+					let separation = this.separation(neighbors);
 					let avoidance = this.avoid(predator);
 
 					this.acceleration.add(alignment);
@@ -191,7 +185,6 @@ import Link from "../../components/Link.astro";
 			p.setup = () => {
 				const container = document.getElementById("sketch-container");
 				const w = container.offsetWidth || 800;
-				// Use 1:1 aspect ratio on mobile, 4:3 on desktop
 				const h = w < 768 ? w : Math.min(600, w * 0.75);
 				const canvas = p.createCanvas(w, h);
 				canvas.parent("sketch-container");
