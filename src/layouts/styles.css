@@ -6,6 +6,11 @@
 	--color-muted: hsl(230 4% 82%);
 	--color-muted-foreground: hsl(230 4% 60%);
 	--color-border: hsl(230 4% 90%);
+	
+	/* magpie iridescent accents */
+	--color-accent-blue: hsl(205 50% 45%);
+	--color-accent-cyan: hsl(195 45% 50%);
+	--color-accent-purple: hsl(250 25% 35%);
 
 	--font-mono:
 		"CommitMono", ui-monospace, SFMono-Regular, "SF Mono", Consolas,
@@ -30,6 +35,11 @@
 			--color-muted: hsl(230 4% 12%);
 			--color-muted-foreground: hsl(230 4% 64%);
 			--color-border: hsl(230 4% 16%);
+			
+			/* brighter in dark mode */
+			--color-accent-blue: hsl(205 60% 55%);
+			--color-accent-cyan: hsl(195 55% 60%);
+			--color-accent-purple: hsl(250 35% 50%);
 		}
 	}
 
@@ -208,11 +218,13 @@
 
 	/* Links */
 	.markdown a {
-		@apply underline underline-offset-[0.125em] decoration-muted-foreground decoration-dotted text-foreground transition-colors;
+		@apply underline underline-offset-[0.125em] decoration-dotted text-foreground transition-colors;
+		text-decoration-color: var(--color-accent-cyan);
 	}
 
 	.markdown a:hover {
-		@apply decoration-foreground;
+		color: var(--color-accent-blue);
+		text-decoration-color: var(--color-accent-blue);
 	}
 
 	/* Code */
@@ -243,5 +255,11 @@
 		.markdown .emoji {
 			@apply bg-muted;
 		}
+	}
+
+	/* Accent link hover */
+	.hover-accent:hover {
+		color: var(--color-accent-blue);
+		text-decoration-color: var(--color-accent-blue);
 	}
 }
