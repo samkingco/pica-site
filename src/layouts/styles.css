@@ -236,12 +236,12 @@
 
 	/* Emoji styling */
 	.markdown .emoji {
-		@apply inline-block text-[1.5em] leading-none px-1 rounded;
+		@apply inline-block px-1;
 	}
 
 	@media (prefers-color-scheme: dark) {
 		.markdown .emoji {
-			background-color: hsl(0 0% 95%);
+			@apply bg-muted;
 		}
 	}
 }
