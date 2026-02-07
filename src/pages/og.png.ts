@@ -35,14 +35,15 @@ export const GET: APIRoute = async () => {
       >
         ${title}
       </div>
-
-      ${excerpt.split("\n").map(
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        ${excerpt.split("\n").map(
 					(line) => `<div
-        style="font-size: 36px; line-height: 40px; font-family: CommitMono; color: rgba(0,0,0,0.6);"
-      >
-        ${line}
-      </div>`
-				)}
+          style="font-size: 36px; line-height: 40px; font-family: CommitMono; color: rgba(0,0,0,0.6);"
+        >
+          ${line}
+        </div>`
+				).join('')}
+      </div>
     </div>
   </div>`);
 
