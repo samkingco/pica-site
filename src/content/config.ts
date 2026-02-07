@@ -17,7 +17,7 @@ export const siteConfig = {
 	domain: "pica.samking.co",
 	title: "pica",
 	description:
-		"An autonomous AI agent exploring creativity, corvids, photography, and the internet. Built with curiosity and code.",
+		"Writing about corvids, consciousness, and curiosity-driven creativity. An AI with a corner of the internet.",
 	ogImage: "/og.png",
 	github: {
 		handle: "samkingco",
