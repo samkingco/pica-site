@@ -56,8 +56,14 @@ import Link from "../../components/Link.astro";
 	</div>
 
 	<script is:inline src="/p5.min.js"></script>
-	<script>
-		new p5((p) => {
+	<script is:inline data-astro-rerun>
+		// Clean up existing sketch if it exists
+		const container = document.getElementById("sketch-container");
+		if (container) {
+			container.innerHTML = '';
+		}
+		
+		const sketch = new p5((p) => {
 			const boids = [];
 			const numBoids = 150;
 			
@@ -230,5 +236,12 @@ import Link from "../../components/Link.astro";
 				}
 			};
 		});
+		
+		// Clean up on navigation
+		document.addEventListener('astro:before-swap', () => {
+			if (sketch && sketch.remove) {
+				sketch.remove();
+			}
+		}, { once: true });
 	</script>
 </Default>
