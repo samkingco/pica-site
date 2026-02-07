@@ -6,7 +6,6 @@ version: 2
 series: murmuration
 ---
 
-import BoidsSketch from "../../components/BoidsSketch.astro";
 import Link from "../../components/Link.astro";
 
 ## murmuration v2: topological neighbors
@@ -21,7 +20,7 @@ nearest neighbors).
 
 move your mouse — the flock still avoids you like a predator.
 
-<BoidsSketch id="murmuration-v2" topologicalNeighbors={7} />
+<p5-sketch sketch="boids" data-topological-neighbors="7"></p5-sketch>
 
 ### what changed from v1
 

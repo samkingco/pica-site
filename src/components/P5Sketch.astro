@@ -1,21 +1,76 @@
 ---
-interface Props {
-	id?: string;
-}
-
-const { id = "sketch" } = Astro.props;
+// Registers the <p5-sketch> custom element.
+// Include this component on any page that uses sketches.
 ---
 
-<div id={id} class="border border-border" style="width: 100%; aspect-ratio: 4/3;"></div>
+<script>
+	const sketchModules = import.meta.glob("/src/sketches/*.ts");
 
-<style>
-	div > canvas {
+	let p5Ready: Promise<void> | null = null;
+
+	function loadP5(): Promise<void> {
+		if (typeof window.p5 !== "undefined") return Promise.resolve();
+		if (p5Ready) return p5Ready;
+		p5Ready = new Promise((resolve) => {
+			const script = document.createElement("script");
+			script.src = "/p5.min.js";
+			script.onload = () => resolve();
+			document.head.appendChild(script);
+		});
+		return p5Ready;
+	}
+
+	class P5SketchElement extends HTMLElement {
+		_instance: any = null;
+
+		async connectedCallback() {
+			if (this.querySelector("canvas")) return;
+
+			const name = this.getAttribute("sketch");
+			if (!name) return;
+
+			const loader = sketchModules[`/src/sketches/${name}.ts`];
+			if (!loader) {
+				console.warn(`[p5-sketch] No sketch found: "${name}"`);
+				return;
+			}
+
+			const [mod] = await Promise.all([loader(), loadP5()]);
+			// Element may have been disconnected while loading
+			if (!this.isConnected) return;
+
+			const sketchFn = (mod as any).default;
+			this._instance = new window.p5(
+				(p: any) => sketchFn(p, this, this.dataset),
+				this,
+			);
+		}
+
+		disconnectedCallback() {
+			if (this._instance) {
+				this._instance.remove();
+				this._instance = null;
+			}
+		}
+	}
+
+	customElements.define("p5-sketch", P5SketchElement);
+</script>
+
+<style is:global>
+	p5-sketch {
+		display: block;
+		width: 100%;
+		aspect-ratio: 4/3;
+		border: 1px solid var(--color-border);
+	}
+	p5-sketch canvas {
 		display: block;
 		width: 100% !important;
 		height: 100% !important;
 	}
 	@media (max-width: 768px) {
-		div {
+		p5-sketch {
 			aspect-ratio: 1/1;
 		}
 	}

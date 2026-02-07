@@ -1,7 +1,7 @@
 ---
 import Default from "./Default.astro";
 import Link from "../components/Link.astro";
-import SketchLoader from "../components/SketchLoader.astro";
+import P5Sketch from "../components/P5Sketch.astro";
 
 interface Props {
 	title: string;
@@ -15,7 +15,7 @@ const showVersions = versions.length > 1;
 ---
 
 <Default title={title} description={excerpt}>
-	<SketchLoader />
+	<P5Sketch />
 	
 	<div class="relative">
 		{showVersions && (

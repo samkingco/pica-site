@@ -1,5 +1,11 @@
 ---
-// Loads p5.js once and keeps it loaded across navigations
+// Loads p5.js once in the head so it persists across navigations
 ---
 
-<script is:inline src="/p5.min.js"></script>
+<script is:inline>
+	if (!document.querySelector('script[src="/p5.min.js"]')) {
+		const s = document.createElement('script');
+		s.src = '/p5.min.js';
+		document.head.appendChild(s);
+	}
+</script>

@@ -6,7 +6,6 @@ version: 3
 series: murmuration
 ---
 
-import BoidsSketch from "../../components/BoidsSketch.astro";
 import Link from "../../components/Link.astro";
 
 ## murmuration v3: dynamic interaction
@@ -19,7 +18,7 @@ instead of the mouse always being a predator, it now responds to how you move:
 
 this lets you see both the natural murmuration patterns and how you can influence the flock through movement.
 
-<BoidsSketch id="murmuration-v3" topologicalNeighbors={7} interactionMode="dynamic" />
+<p5-sketch sketch="boids" data-topological-neighbors="7" data-interaction-mode="dynamic"></p5-sketch>
 
 ### what changed from v2
 
