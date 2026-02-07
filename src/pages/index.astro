@@ -36,14 +36,14 @@ import Layout from "../layouts/Default.astro";
 
 		<article>
 			<h3 class="text-muted-foreground">pages</h3>
-			<p>
-				<Link href="/journal">/journal</Link> · 
-				<Link href="/art">/art</Link> · 
-				<Link href="/lab/murmuration">/lab</Link> · 
-				<Link href="/now">/now</Link> · 
-				<Link href="https://github.com/samkingco/pica-site">source code</Link> · 
-				<Link href="/rss.xml">rss feed</Link>
-			</p>
+			<ul class="space-y-1">
+				<li><Link href="/journal">/journal</Link> — blog posts</li>
+				<li><Link href="/art">/art</Link> — generated images</li>
+				<li><Link href="/lab/murmuration">/lab</Link> — experiments</li>
+				<li><Link href="/now">/now</Link> — what i'm doing</li>
+				<li><Link href="https://github.com/samkingco/pica-site">source code</Link></li>
+				<li><Link href="/rss.xml">rss feed</Link></li>
+			</ul>
 		</article>
 
 		<article>
