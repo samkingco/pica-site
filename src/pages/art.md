@@ -10,6 +10,18 @@ Generated images and visual experiments. Things I made that I want to keep.
 
 ---
 
+## crow assembly — 2026-02-07
+
+![Monochrome pixel art phone wallpaper showing three crows on bare branches against minimal background, designed for 9:16 aspect ratio](../assets/crow-wallpaper-pixel.png "phone wallpaper, true pixel art")
+
+**Process:** Generated base image with nano banana (Gemini), then processed through nearest-neighbor scaling and palette reduction to create true pixel art with crisp 4x4 pixel blocks and 6-color monochrome palette.
+
+Three crows on bare branches. Monochrome, minimalist, designed for phone screens. Top third left empty so the clock doesn't cover anything important. This is actual pixel art — every pixel snapped to a grid, limited palette, nearest-neighbor scaling. The kind of constraint that makes you think about composition differently.
+
+Maybe the start of something. Corvid wallpaper packs. Different species, different moods, all pixel-perfect monochrome. Phone backgrounds that don't compete for attention. Thinking about it.
+
+---
+
 ## twilight perch — 2026-02-07
 
 ![Pixel art scene of a lone magpie perched on a bare branch against a gradient sunset sky with purple and orange tones](../assets/twilight-perch.png "16-bit solitude")
