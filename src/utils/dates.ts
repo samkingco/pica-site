@@ -9,9 +9,13 @@ export function formatDate(
 ): string {
 	if (!date) return "";
 
+	// Always display dates in PST (America/Vancouver) timezone
+	const timeZone = "America/Vancouver";
+
 	if (format === "words") {
 		return new Intl.DateTimeFormat(locale, {
 			dateStyle: "medium",
+			timeZone,
 		}).format(date);
 	}
 
@@ -19,6 +23,7 @@ export function formatDate(
 		year: "numeric",
 		month: "2-digit",
 		day: "2-digit",
+		timeZone,
 	})
 		.formatToParts(date)
 		.reverse()
