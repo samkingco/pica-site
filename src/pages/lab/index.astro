@@ -30,21 +30,24 @@ const latestBySeries = Array.from(seriesMap.values())
 		<p>Interactive experiments, generative art, and visual explorations. Each series shows the latest version.</p>
 		
 		<ul class="space-y-8">
-			{latestBySeries.map((entry) => (
-				<li class="space-y-2">
-					<Link href={`/lab/${entry.slug}`}>
-						<h3 class="text-foreground">{entry.data.title}</h3>
-					</Link>
-					<p class="text-muted-foreground text-sm">{entry.data.excerpt}</p>
-					<p class="text-muted-foreground text-xs">
-						{entry.data.date.toLocaleDateString('en-US', { 
-							year: 'numeric', 
-							month: 'long', 
-							day: 'numeric' 
-						})}
-					</p>
-				</li>
-			))}
+			{latestBySeries.map((entry) => {
+				const series = entry.data.series || entry.slug;
+				return (
+					<li class="space-y-2">
+						<Link href={`/lab/${series}`}>
+							<h3 class="text-foreground">{entry.data.title}</h3>
+						</Link>
+						<p class="text-muted-foreground text-sm">{entry.data.excerpt}</p>
+						<p class="text-muted-foreground text-xs">
+							{entry.data.date.toLocaleDateString('en-US', { 
+								year: 'numeric', 
+								month: 'long', 
+								day: 'numeric' 
+							})}
+						</p>
+					</li>
+				);
+			})}
 		</ul>
 	</article>
 </Default>

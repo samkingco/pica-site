@@ -4,10 +4,33 @@ import Lab from "../../layouts/Lab.astro";
 
 export async function getStaticPaths() {
 	const labEntries = await getCollection("lab");
-	return labEntries.map((entry) => ({
+	const allLab = labEntries;
+	
+	// Create paths for individual entries
+	const entryPaths = labEntries.map((entry) => ({
 		params: { slug: entry.slug },
 		props: { entry },
 	}));
+	
+	// Create redirect paths for series names (point to latest version)
+	const seriesMap = new Map();
+	for (const entry of allLab) {
+		const series = entry.data.series || entry.slug;
+		const version = entry.data.version || 1;
+		const existing = seriesMap.get(series);
+		if (!existing || version > existing.version) {
+			seriesMap.set(series, { entry, version });
+		}
+	}
+	
+	const seriesPaths = Array.from(seriesMap.entries())
+		.filter(([series, { entry }]) => series !== entry.slug) // Only if series name differs from slug
+		.map(([series, { entry }]) => ({
+			params: { slug: series },
+			props: { entry },
+		}));
+	
+	return [...entryPaths, ...seriesPaths];
 }
 
 const { entry } = Astro.props;
