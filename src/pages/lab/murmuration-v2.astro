@@ -56,7 +56,12 @@ import Link from "../../components/Link.astro";
 
 	<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
 	<script is:inline>
-		window.addEventListener('load', () => {
+		// Initialize immediately for client-side navigation
+		const initSketch = () => {
+			if (typeof p5 === 'undefined') {
+				setTimeout(initSketch, 50);
+				return;
+			}
 		new p5((p) => {
 			const boids = [];
 			const numBoids = 150;
@@ -225,6 +230,7 @@ import Link from "../../components/Link.astro";
 				}
 			};
 		});
-		});
+		};
+		initSketch();
 	</script>
 </Default>
