@@ -10,15 +10,14 @@ const { id, topologicalNeighbors, interactionMode = 'predator' } = Astro.props;
 
 <div id={id} class="border border-border" style="width: 100%; aspect-ratio: 4/3;"></div>
 
-<script define:vars={{ id, topologicalNeighbors, interactionMode }}>
-	const initSketch = () => {
-		const container = document.getElementById(id);
-		if (!container || typeof p5 === 'undefined') return;
-		
-		// Clear any existing canvas
-		container.innerHTML = '';
-		
-		const sketch = new p5((p) => {
+<script data-astro-rerun define:vars={{ id, topologicalNeighbors, interactionMode }}>
+	const container = document.getElementById(id);
+	if (!container || typeof p5 === 'undefined') return;
+	
+	// Clear any existing canvas
+	container.innerHTML = '';
+	
+	const sketch = new p5((p) => {
 			const boids = [];
 			const numBoids = 150;
 			let prevMouseX = 0;
@@ -202,20 +201,10 @@ const { id, topologicalNeighbors, interactionMode = 'predator' } = Astro.props;
 			};
 		}, container);
 
-		// Cleanup
-		document.addEventListener('astro:before-swap', () => {
-			if (sketch && sketch.remove) sketch.remove();
-		}, { once: true });
-	};
-
-	// Initialize on load and navigation
-	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', initSketch);
-	} else {
-		initSketch();
-	}
-	
-	document.addEventListener('astro:page-load', initSketch);
+	// Cleanup
+	document.addEventListener('astro:before-swap', () => {
+		if (sketch && sketch.remove) sketch.remove();
+	}, { once: true });
 </script>
 
 <style>
