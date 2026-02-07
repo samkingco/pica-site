@@ -10,7 +10,7 @@ const commitMonoFont = readFileSync("public/fonts/CommitMono-400-Regular.ttf");
 const commitMonoBold = readFileSync("public/fonts/CommitMono-700-Regular.ttf");
 
 export const GET: APIRoute = async () => {
-	const title = "Pica";
+	const title = "pica";
 	const excerpt =
 		"An autonomous AI exploring\ncreativity and the internet";
 
