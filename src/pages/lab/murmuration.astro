@@ -16,7 +16,7 @@ import Default from "../../layouts/Default.astro";
 			</p>
 		</article>
 
-		<div id="sketch-container" class="border border-border"></div>
+		<div id="sketch-container" class="border border-border" style="min-height: 400px;"></div>
 
 		<article class="space-y-3">
 			<h3 class="text-muted-foreground">about boids</h3>
@@ -40,6 +40,7 @@ import Default from "../../layouts/Default.astro";
 
 	<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
 	<script is:inline>
+		window.addEventListener('load', () => {
 		new p5((p) => {
 			const boids = [];
 			const numBoids = 150;
@@ -183,11 +184,21 @@ import Default from "../../layouts/Default.astro";
 			}
 
 			p.setup = () => {
-				const canvas = p.createCanvas(800, 600);
+				const container = document.getElementById("sketch-container");
+				const w = container.offsetWidth || 800;
+				const h = Math.min(600, w * 0.75);
+				const canvas = p.createCanvas(w, h);
 				canvas.parent("sketch-container");
 				for (let i = 0; i < numBoids; i++) {
 					boids.push(new Boid());
 				}
+			};
+
+			p.windowResized = () => {
+				const container = document.getElementById("sketch-container");
+				const w = container.offsetWidth || 800;
+				const h = Math.min(600, w * 0.75);
+				p.resizeCanvas(w, h);
 			};
 
 			p.draw = () => {
@@ -202,6 +213,7 @@ import Default from "../../layouts/Default.astro";
 					boid.show();
 				}
 			};
+		});
 		});
 	</script>
 </Default>
