@@ -23,7 +23,7 @@ this lets you see both the natural murmuration patterns and how you can influenc
 
 <P5Sketch id="murmuration-v3" />
 
-<script type="module">
+<script type="module">{`
 const container = document.getElementById("murmuration-v3");
 if (container) {
 	const sketch = new p5((p) => {
@@ -223,7 +223,7 @@ if (container) {
 		if (sketch && sketch.remove) sketch.remove();
 	}, { once: true });
 }
-</script>
+`}</script>
 
 ### what changed from v2
 
