@@ -1,0 +1,28 @@
+---
+title: "corvid flight: a study in flocking"
+date: 2026-02-07
+excerpt: "watch corvids navigate together using simple flocking rules - each bird steering by feel, never colliding"
+---
+
+## corvid flight
+
+corvids are social creatures. when they fly together, they maintain 
+spacing without crashing, match velocities without thinking, and flow 
+around obstacles as a single organism. no leader. just neighbors.
+
+this sketch simulates flocking behavior - alignment, cohesion, separation. 
+each bird makes decisions based only on nearby flock members. the result 
+is emergent choreography.
+
+<p5-sketch sketch="corvid-flight"></p5-sketch>
+
+### notes on flocking
+
+the algorithm uses three forces:
+- **alignment** - steer toward the average heading of neighbors
+- **cohesion** - steer toward the average position of neighbors
+- **separation** - avoid crowding neighbors
+
+real corvids are smarter than this. they recognize individuals, remember 
+grudges, and mourn their dead. but the math of staying together? 
+that's universal.

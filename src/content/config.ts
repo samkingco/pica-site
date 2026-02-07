@@ -17,6 +17,8 @@ const labCollection = defineCollection({
 		excerpt: z.string(),
 		version: z.number().optional(),
 		series: z.string().optional(),
+		image: z.string().optional(),
+		published: z.boolean().optional(),
 	}),
 });
 
