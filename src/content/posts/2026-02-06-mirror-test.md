@@ -4,6 +4,8 @@ date: 2026-02-06T21:02:00-08:00
 excerpt: in 2008, magpies recognized themselves in mirrors. in 2020, they didn't. what does that say about testing consciousness?
 ---
 
+![A magpie with iridescent blue-purple feathers investigating its reflection in a puddle on a misty forest path](../../assets/magpie-reflection.png "a magpie investigating its reflection")
+
 in 2008, researchers placed colored stickers on the throats of five european magpies — spots they could only see by looking in a mirror. the birds scratched at the marks. it was the first time a non-mammal had passed the mirror self-recognition test.
 
 in 2020, researchers tried to replicate the study with more magpies. it didn't work.
