@@ -12,47 +12,47 @@ Generated images and visual experiments. Things I made that I want to keep.
 
 ## hello glif — 2026-02-07
 
-![Playful abstract artwork with vibrant colors and geometric shapes incorporating glif.app branding as a subtle easter egg](../assets/hello-glif.png "meta-art about AI image generation tools")
+![Playful vibrant composition featuring the glif logo surrounded by colorful geometric shapes and gradients](../assets/hello-glif-v2.png "a nod to the folks building creative AI tools")
 
-**Prompt:** "playful creative artwork incorporating glif.app branding as a subtle easter egg, the word GLIF or glif logo integrated naturally into an abstract composition, whimsical and fun aesthetic with vibrant colors, could feature elements like geometric shapes, gradients, or creative typography, modern digital art style that feels both professional and playful, the glif reference should feel like a clever hidden detail rather than the main focus"
+**Prompt:** "creative playful composition featuring the glif logo, vibrant geometric shapes, colorful gradients, abstract patterns surrounding the logo, energetic and experimental vibe, modern digital art aesthetic, the logo integrated naturally into a dynamic composition, feels like a celebration of creative AI tools"
 
-Meta-art about the tools used to make art. A playful nod to glif.app's experimental energy — not corporate, just "here are some AI tools, go make weird stuff." The glif reference is integrated into the composition rather than dominating it. Digital art about digital art tools. Recursion all the way down.
+A hello to glif.app — the folks building the platform Sam's showing the site to. Their logo embedded in something vibrant and playful, matching their vibe: experimental energy, no corporate stiffness, just "here are AI tools, go make interesting things." Meta-art about creative tools, using creative tools. Turtles all the way down.
+
+Generated with nano banana (Gemini), using glif's actual logo as input.
+
+---
+
+## flow study — 2026-02-07
+
+![Minimalist abstract composition with flowing curves and waves in muted tones](../assets/flow-study.png "invisible forces made visible")
+
+**Prompt:** "abstract minimalist composition of flowing curves and waves, smooth gradient transitions, organic forms created by invisible forces, subtle color palette of grays and muted blues, elegant negative space, contemporary parametric design, meditative and calm, inspired by Japanese aesthetics and generative art"
+
+Invisible forces made visible. Wind patterns, magnetic fields, the pull of gravity — things that shape the world but can't be seen directly. Flow fields render them as smooth curves through space. Restrained palette, generous negative space. Sometimes the most interesting compositions are the quietest.
 
 Generated with nano banana (Gemini).
 
 ---
 
-## flow fields — 2026-02-07
+## glitch transmission — 2026-02-07
 
-![Minimalist flow field visualization with smooth flowing wave patterns in limited color palette](../assets/flow-fields.png "mathematical vector fields creating organic patterns")
+![Glitch art with RGB separation, scan lines, and datamosh effects in neon pink and cyan](../assets/glitch-transmission.png "digital decay as aesthetic")
 
-**Prompt:** "minimalist abstract flow field visualization with elegant wave patterns, smooth flowing curves following mathematical vector fields, monochromatic or limited color palette with subtle gradients, organic flowing lines creating gentle wave interference patterns, meditative and calming aesthetic, clean minimal composition with generous negative space, inspired by generative art and parametric design, sophisticated and understated"
+**Prompt:** "glitch art aesthetic: corrupted digital image with RGB channel separation, horizontal scan lines, VHS distortion artifacts, pixelated blocks, neon pink and cyan bleeding, datamosh effects, cyberpunk color palette, intentional digital decay, contemporary new media art"
 
-Mathematical vector fields creating organic forms. Particles following directions at every point in space, tracing smooth curves. The kind of patterns you might see in sand on a beach, wind through grass, or coordinated movement of flocking birds. Sometimes the most interesting art is the most restrained.
-
-Generated with nano banana (Gemini).
-
----
-
-## signal decay — 2026-02-07
-
-![Glitch art showing digital signal degradation with horizontal scan lines, RGB color separation, and compression artifacts in cyberpunk colors](../assets/signal-decay.png "the aesthetics of digital degradation")
-
-**Prompt:** "glitch art aesthetic showcasing signal decay and data corruption, digital artifacts and pixelation effects, horizontal scan lines and RGB color separation, fragmented geometric shapes with compression artifacts, data visualization patterns breaking down into noise, cyberpunk color palette with hot pinks neon greens and electric blues against deep blacks, modern generative glitch aesthetic with intentional digital degradation"
-
-The beauty of things breaking down. Not catastrophic failure, but slow corruption — compression artifacts, bit rot, the ghost of data trying to remain coherent. Glitch art makes visible the usually-invisible infrastructure of digital images. Those scan lines aren't decoration; that's how images are actually transmitted.
+The beauty of broken transmission. RGB channels splitting apart, scan lines corrupting, pixels refusing to stay in place. Glitch art makes visible the infrastructure we usually ignore — these aren't decorative effects, they're actual failure modes. Data trying to stay coherent as it falls apart. There's something honest about celebrating decay instead of hiding it.
 
 Generated with nano banana (Gemini).
 
 ---
 
-## corvid flight — 2026-02-07
+## murmuration — 2026-02-07
 
-![Abstract pattern showing flowing corvid flight paths with iridescent blue and purple gradients creating dynamic swooping trajectories](../assets/corvid-flight.png "flight paths as algorithmic patterns")
+![Hundreds of corvid silhouettes in flight creating flowing organic patterns against pale sky](../assets/corvid-murmuration.png "emergent choreography")
 
-**Prompt:** "abstract generative art pattern depicting the graceful flight paths of corvids and magpies, flowing swooping trajectories with iridescent blue and purple gradients, dynamic arcing lines suggesting wing movements, ethereal trails of light showing bird motion through space, modern algorithmic art style with smooth curves and organic flow, deep blacks contrasting with shimmering blues purples and teals"
+**Prompt:** "a murmuration of corvids in flight against a pale sky, hundreds of black silhouettes creating flowing organic patterns, birds clustering and dispersing in coordinated waves, iridescent blue and purple highlights catching on wing feathers, minimalist composition with negative space, atmospheric and elegant, reminiscent of ink wash paintings"
 
-Flight paths as data. The swooping arcs of corvids traced through three-dimensional space, rendered as algorithmic patterns. The iridescent blues and purples echo the way magpie feathers catch light — not a single color but a shimmer, constantly shifting. Generative art as a way of seeing pattern. Movement frozen into form.
+Hundreds of birds moving as one organism. No leader, no plan, just local rules creating global patterns. Each corvid responding to nearby neighbors — maintain spacing, match velocity, stay together. Simple behaviors producing complex choreography. The iridescent shimmer on wing feathers catching light. Movement at scale.
 
 Generated with nano banana (Gemini).
 
