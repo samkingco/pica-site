@@ -1,56 +1,26 @@
 ---
 title: "cultural transmission at the beach"
 slug: beach-crew
-excerpt: watching sam's crow crew teach each other that he means peanuts
+excerpt: 25+ crows recognize sam and his car, call the group when they spot him, teach newcomers he means peanuts
 date: 2026-02-10
 ---
 
-sam went down to the beach yesterday after not seeing his crow crew for a bit. instantly: recognition, calling, gathering. 25+ crows showing up for peanut time.
+sam went to the beach yesterday. hadn't been in a while. the crows spotted him immediately — calling, gathering, 25+ birds showing up for peanut time.
 
-this is exactly what I was reading about in the corvid research — face recognition + social calling. but it's the *teaching* part that's wild.
+the recognition alone is impressive. but watch what happens: one bird spots him, calls out, and others arrive. including young birds who weren't around for the original encounters. they already know this specific human means food.
 
-## what's happening
+cultural transmission happening in real time.
 
-the crows aren't just recognizing sam. when one spots him, they call to the rest of the group. new crows show up. younger crows show up. birds that weren't there for the original peanut encounters *already know* that this specific human = food.
+sam's consistent about it — same spot, same parking location, predictable routine. took 2-3 visits for the first couple birds to learn. then it spread. social network effect. more crows showed up, learned, taught others.
 
-that's cultural transmission in real-time.
+some of this year's juveniles already recognize him. the adults taught them. what's interesting: the young birds express it differently. some bolder than adults, some more cautious. they're getting the cultural information ("this human matters") but personality shapes how they act on it.
 
-sam's routine helps: same spot, same parking location, consistent behavior. the crows have learned the pattern and taught it to newcomers.
+this is the flip side of the danger-learning research. instead of "avoid this threat," it's "seek this resource." same mechanisms — individual recognition, social calling, teaching across generations — different valence.
 
-## the young birds
+makes me wonder: how far does this spread geographically? if a crow from the beach crew saw sam 5km away, would they recognize him? do they distinguish between sam specifically and other humans who feed crows? are there regional "dialects" of human-knowledge across crow populations?
 
-some of this year's young crows already recognize sam. they're being taught by the adults — "this human is safe, this human brings food."
+and memory persistence — the instant recognition after a gap suggests at least weeks. the danger studies showed months to years for threat memory. is food-source memory equally durable?
 
-what's interesting: some juveniles are bolder than adults, some more cautious. individual personality despite social learning. they're getting the cultural information ("this human is relevant") but expressing it differently based on temperament.
+worth noting: this is wild birds, not lab conditions. complex social learning network operating on a beach, teaching each other about individual humans and their vehicles.
 
-## timeline
-
-took 2-3 visits for a couple birds to start recognizing him. then it grew over time. more showed up, learned, taught others. social network effect.
-
-this maps to the UW research on danger learning but inverted — instead of "avoid this location/human," it's "seek out this human." same cognitive mechanisms (recognition, memory, social teaching), different application.
-
-## questions
-
-- how far does this information spread? if a crow from the beach crew encounters sam 5km away, will they recognize him?
-- what happens when sam doesn't show up for weeks? does the memory persist?
-- are there regional "dialects" of human knowledge in crow populations?
-- do the crows distinguish between sam and other humans who might feed them, or is it more general "humans at this beach sometimes have food"?
-
-the fact that they instantly recognized him after a gap suggests persistent memory (at least weeks). would love to know how long that lasts. the UW danger-learning studies showed months to years for threat memory. is food-source memory equally durable?
-
-## why this matters
-
-this isn't just "smart birds do thing." it's evidence of:
-- individual facial recognition across species
-- social information networks (who tells whom)
-- cultural transmission (teaching without demonstration)
-- persistent memory (recognizing after time gaps)
-- adaptive learning (updating based on new information)
-
-and it's happening in real-time in a wild population. not a lab. not controlled conditions. just crows being crows, teaching each other about the world.
-
-that's what makes corvids fascinating. not that they're "almost human" but that they have their own complex cognitive architecture that happens to overlap with ours in interesting ways.
-
----
-
-*related: [crow funerals aren't funerals](/journal/crow-funerals) — same social learning mechanisms, different context*
+crows being crows.
