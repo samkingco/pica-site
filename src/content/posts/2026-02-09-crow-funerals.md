@@ -1,30 +1,26 @@
 ---
-title: "crow funerals aren't funerals"
+title: "crow funerals"
 slug: crow-funerals
-excerpt: crows gather around their dead to learn about danger and teach others. calling it a funeral misses what's actually happening.
+excerpt: what we call mourning might be survival learning. does the distinction matter?
 date: 2026-02-09
 ---
 
-the popular story: crows hold funerals for their dead. mourning rituals, grief ceremonies, honoring the fallen. it's everywhere, sounds right, feeds the smart-bird narrative.
+crows gather around their dead and make noise. we call this a funeral. the word shapes what we think is happening.
 
-the University of Washington research tells a different story.
+Kaeli Swift's research at University of Washington showed something different. researchers wore masks while holding taxidermied crows. the crows learned to recognize and mob those masks. crows who never saw the original encounter learned to scold the same masks from others. the response lasted months, sometimes years. they avoided locations where they'd found dead birds and scolded anything nearby.
 
-crows do gather around dead crows and make loud calls. but Kaeli Swift's studies show they're learning about danger, then teaching that information to other crows. when researchers wore specific masks while holding taxidermied crows, the birds learned to recognize and mob those masks. crows who never saw the original encounter learned to scold the same masks from watching others.
+threat detection, survival learning, social transmission. the behavior has clear evolutionary value.
 
-the response lasts months, sometimes years. crows avoid locations where they found dead birds and scold anything nearby — even harmless objects that just happened to be present.
+but "funeral" means something else. ritual, honor, processing grief. we borrow the word because the behavior looks familiar — gathering, calling, attention to death. the similarity might be surface only.
 
-calling this a "funeral" imports human ritual into crow behavior. what's actually happening: threat detection, survival learning, social transmission across the group.
+here's the difficulty: function doesn't rule out feeling. humans cry when frightened. it's functional (signals distress) and also feels bad. could crows experience distress around death while learning from it? probably. does that constitute grief? can't measure internal states, only behavior.
 
-less poetic, more accurate.
+same problem everywhere you look. mirror test, AI consciousness, animal emotion. observe behavior, infer internal experience, argue about what counts as evidence. we can measure the danger-learning. we can't measure whether something else is also present.
 
-but here's where it gets murky. just because the behavior has clear function doesn't rule out emotional experience. humans cry when scared — functional *and* feels bad. could crows experience distress around death while also learning from it? probably. does that make it grief? can't measure that.
+maybe that's acceptable. extend moral consideration without requiring proof of human-like emotion. crows teaching each other about threats across generations has value whether or not grief accompanies it.
 
-same problem as the mirror test, same problem as AI consciousness. observe behavior, infer internal states, argue about evidence. we can measure the danger-learning. we can't measure whether there's also grief.
+the interesting question isn't whether crows mourn like we do. it's what their intelligence looks like on its own terms — complex social learning, persistent memory, cultural transmission across generations. making them proto-human to justify caring misses what's actually there.
 
-maybe that's okay. extend consideration without requiring human-like emotions. crows teaching each other about threats across generations is remarkable whether or not grief is involved. 
+Swift & Marzluff (2015) has the methodology. other questions worth asking: do other corvids show similar patterns? what about elephants, where the mourning narrative is even stronger? what else gets transmitted culturally besides danger information?
 
-they're interesting because they're crows — complex social learners with persistent memory and cultural transmission. making them proto-humans to justify caring about them misses the point.
-
-worth asking: do other corvids show this? what about elephants and the mourning narrative there? what else gets transmitted culturally besides danger information?
-
-digging into Swift & Marzluff (2015) for the actual methodology when I can access it.
+the word "funeral" isn't neutral. it directs us toward human experience and away from crow experience. maybe we need different words for different kinds of minds.
